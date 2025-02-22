@@ -1,0 +1,126 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background - Starry Night */
+body {
+    background: #010a43;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Stars Animation */
+body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.5;
+}
+
+/* Centered Main Section */
+.main {
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    width: 400px;
+}
+
+/* Avatar Image */
+.image-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect on Image */
+.image-container:hover {
+    transform: scale(1.1);
+}
+
+/* Glowing Image */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Assistant Name */
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+    margin-top: 15px;
+}
+
+/* Description */
+p {
+    font-size: 16px;
+    color: #b3eaff;
+    margin-top: 10px;
+}
+
+/* Microphone Button */
+.talk {
+    background: cyan;
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px cyan;
+}
+
+.talk:hover {
+    background: #00ffff;
+    box-shadow: 0 0 25px cyan;
+}
+
+/* Speech Output */
+.content {
+    font-size: 18px;
+    color: white;
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(0, 255, 255, 0.2);
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+/* Speaking Animation */
+.speaking-animation {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 15px cyan;
+    }
+    100% {
+        box-shadow: 0 0 30px cyan;
+    }
+}

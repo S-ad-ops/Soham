@@ -1,4 +1,4 @@
-# Soham's Virtual Assistant
+# JARVIS - Virtual Assistant
 # A Virtual assistant which can follow some of the commands 
 
 Name - L U N A
